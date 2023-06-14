@@ -5,6 +5,8 @@
  * @LastEditors: ZiJieChen
  * @LastEditTime: 2022-09-27 23:19:37
  */
+
+// add new obervation function pose_posi  and adjust sensor correct frequency
 #include "lidar_localization/models/kalman_filter/error_state_kalman_filter.h"
 
 namespace lidar_localization {
