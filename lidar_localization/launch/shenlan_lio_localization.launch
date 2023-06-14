@@ -1,0 +1,9 @@
+<launch>
+     <!-- if false, use the gnss origin frame from mapping -->
+    <param name ="mapping" type="bool" value="false"/>
+    
+    <node pkg="rviz"  type="rviz"  name="rviz"  args="-d $(find lidar_localization)/rviz/shenlan_lio_localization.rviz"></node>
+    <node pkg="lidar_localization"  type="shenlan_data_pretreat_node"  name="shenlan_data_pretreat_node"  output="screen"></node>
+    <node pkg="lidar_localization"  type="shenlan_lio_matching_node"  name="shenlan_front_end_node"  output="screen"></node>
+    <node pkg="lidar_localization"  type="shenlan_sliding_window_node"  name="shenlan_back_end_node"  output="screen"></node>
+</launch>
